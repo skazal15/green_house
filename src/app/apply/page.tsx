@@ -75,7 +75,7 @@ const ApplyPage = () => {
           </h2>
         </div>
         <div className="bg-white p-8 rounded-lg shadow-md">
-          {step === 2 && (
+          {step === 1 && (
             <form onSubmit={handleCandidateSubmit} className="space-y-6">
               <div>
                 <label htmlFor="first_name" className="block text-sm font-medium text-[#15372c]">
@@ -139,7 +139,7 @@ const ApplyPage = () => {
             </form>
           )}
 
-          {step === 1 && (
+          {step === 2 && (
             <form onSubmit={handleResumeSubmit} className="space-y-6">
               <div>
                 <label htmlFor="resume" className="block text-sm font-medium text-[#15372c]">
