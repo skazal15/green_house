@@ -79,7 +79,7 @@ const ApplyPage = () => {
   return (
     <div className="min-h-screen bg-[#f5f7f9] flex flex-col py-12 px-4 sm:px-6 lg:px-8">
       <div className="mb-8 self-start">
-        <Link href="/admin" className="bg-[#15372c] text-white px-4 py-2 rounded-md hover:bg-[#0f2b22] transition-colors">
+        <Link href="/" className="bg-[#15372c] text-white px-4 py-2 rounded-md hover:bg-[#0f2b22] transition-colors">
           Back to Admin
         </Link>
       </div>
@@ -183,7 +183,7 @@ const ApplyPage = () => {
               <div className="text-center space-y-4">
                 <p className="text-xl font-semibold text-[#00b2a9]">Application Submitted Successfully!</p>
                 <p className="mt-2">Thank you for your application. We will review it and get back to you soon.</p>
-                <Link href="/admin" className="inline-block bg-[#00b2a9] text-white px-4 py-2 rounded-md hover:bg-[#008c84] transition-colors">
+                <Link href="/" className="inline-block bg-[#00b2a9] text-white px-4 py-2 rounded-md hover:bg-[#008c84] transition-colors">
                   Return to Admin
                 </Link>
               </div>
