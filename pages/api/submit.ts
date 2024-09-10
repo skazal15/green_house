@@ -30,6 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resume = Array.isArray(files.resume) ? files.resume[0] : files.resume;
       const candidateIdField = fields.candidateId;
       const candidateId = Array.isArray(candidateIdField) ? candidateIdField[0] : candidateIdField;
+      console.log(candidateId);
 
       if (!resume || !candidateId) {
         return res.status(400).json({ error: 'No resume file uploaded or missing candidate ID' });
@@ -42,8 +43,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Basic ${Buffer.from('f06b2b153e016f8e7c3632627af56b1d-7:').toString('base64')}`,
-          'On-Behalf-Of': '1234', // Ganti dengan ID pengguna Greenhouse Anda
+          'Authorization': `Basic ${Buffer.from(GREENHOUSE_API_KEY + ':').toString('base64')}`,
+          'On-Behalf-Of': '4413404007', // Ganti dengan ID pengguna Greenhouse Anda
         },
         body: JSON.stringify({
           filename: resume.originalFilename || 'resume.pdf',
