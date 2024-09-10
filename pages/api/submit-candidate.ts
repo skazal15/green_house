@@ -17,12 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Basic ${Buffer.from(GREENHOUSE_API_KEY + ':').toString('base64')}`,
-          'On-Behalf-Of': 'YOUR_USER_ID', // Change with your greenhouse id
+          'On-Behalf-Of': '4413404007', // Change with your greenhouse id
         },
         body: JSON.stringify(candidateData),
       });
 
       const data = await response.json();
+      console.log(response);
 
       if (response.ok) {
         res.status(200).json({ message: 'Candidate submitted successfully', candidateId: data.id });
