@@ -9,7 +9,7 @@ const ApplyPage = () => {
     last_name: '',
     email_addresses: [{ value: '', type: 'personal' }],
     phone_numbers: [{ value: '', type: 'mobile' }],
-    applications: [{ job_id: 215725 }], // Ganti dengan ID pekerjaan yang sesuai
+    applications: [{ job_id: 4063668007 }], // Ganti dengan ID pekerjaan yang sesuai
   });
   const [resume, setResume] = useState<File | null>(null);
   const [message, setMessage] = useState('');
