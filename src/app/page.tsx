@@ -76,7 +76,7 @@ const AdminPage = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link href="/apply" className="bg-[#00b2a9] text-white px-4 py-2 rounded-md hover:bg-[#008c84] transition-colors">
-          Add
+          Add Candidate
         </Link>
       </div>
 
